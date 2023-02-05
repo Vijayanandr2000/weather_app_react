@@ -1,0 +1,124 @@
+.weather-container {
+  height: 86.7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e0e0e0;
+  transition: all 0.5s ease-in-out;
+  padding: 50px;
+}
+
+.sunny {
+  background-image: url("https://www.vmcdn.ca/f/files/princegeorgematters/pgc-images/environment/sunshine.jpg;w=960");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cloudy {
+  background-image: url("https://s7d2.scene7.com/is/image/TWCNews/clouds_from_above");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rainy {
+  background-image: url("https://images.unsplash.com/photo-1610741083757-1ae88e1a17f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFpbnklMjBkYXl8ZW58MHx8MHx8&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.snowy {
+  background-image: url("https://p0.pikist.com/photos/88/909/winter-snow-cold-frost-frozen-season-snowy-weather-tree.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+#location {
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+label {
+  font-size: 18px;
+  margin: 10px;
+  display: block;
+  font-weight: bold;
+}
+
+button#search-button {
+  width: 120px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #000060d7;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button#search-button:hover {
+  background-color: rgb(19, 47, 113);
+}
+
+.error {
+  color: red;
+  font-size: 18px;
+  margin: 10px;
+  text-align: center;
+}
+
+span {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+@media (max-width: 450px) {
+  #location {
+    width: 90%;
+  }
+  .weather-data {
+    align-items: start;
+  }
+}
+
+@media (max-width: 730px) {
+  .sunny {
+    background-image: url("https://www.vmcdn.ca/f/files/princegeorgematters/pgc-images/environment/sunshine.jpg;w=960");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -200px;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
